@@ -22,12 +22,12 @@ const TaskLayout = async () => {
 	console.log(tasks);
 
 	return (
-		<div className='w-full h-fit flex flex-wrap'>
+		<>
 			{tasks?.map((task) => (
 				<TaskCard key={task.id} title={task.title} description={task.description} id={task.id} userId={task.userId} />
 			))}
 			<AddTaskCard />
-		</div>
+		</>
 	);
 };
 

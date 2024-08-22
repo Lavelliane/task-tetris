@@ -29,7 +29,6 @@ export default function AddTaskModal() {
 		return null;
 	}
 
-	console.log(user);
 	const HandleAddTask = async (data) => {
 		console.log(data, data.title, data.description, user.id);
 		try {
