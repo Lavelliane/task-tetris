@@ -14,6 +14,7 @@ import {
 import { useUser } from '@clerk/clerk-react';
 import { useForm } from 'react-hook-form';
 import { ListPlus } from '@phosphor-icons/react';
+import { useRouter } from 'next/navigation';
 
 export default function AddTaskModal() {
 	const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
@@ -21,6 +22,7 @@ export default function AddTaskModal() {
 
 	const { register, handleSubmit } = useForm();
 	// const [data, setData] = useState('');
+	const router = useRouter();
 
 	if (!isLoaded) {
 		// Handle loading state however you like
@@ -41,6 +43,7 @@ export default function AddTaskModal() {
 
 			console.log(response);
 			onClose();
+			router.refresh();
 		} catch (error) {
 			console.error(error);
 		}

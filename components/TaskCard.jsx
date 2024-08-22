@@ -8,11 +8,12 @@ export default function TaskCard(props) {
 	const router = useRouter();
 
 	const HandleRedirect = () => {
-		router.push(userId);
+		console.log(props.userId);
+		router.push('/task/' + props.userId);
 	};
 
 	return (
-		<Card className='max-w-[320px] w-full hover:scale-[102%] cursor-pointer mr-4 mb-4' onClick={HandleRedirect}>
+		<Card className='max-w-[320px] w-full hover:scale-[102%] mr-4 mb-4' isPressable onClick={HandleRedirect}>
 			<CardHeader className='flex gap-2'>
 				<div className='flex flex-col'>
 					<p className='text-lg font-semibold'>{props.title}</p>
