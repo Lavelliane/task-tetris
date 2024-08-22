@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import TaskLayout from '@/layouts/TaskLayout';
 
-function DashboardPage() {
-  return (
-    <div>
-      Dashboard
-    </div>
-  )
+async function DashboardPage() {
+	return (
+		<main className='max-w-6xl w-full flex items-start min-h-[80vh] h-fit mx-auto'>
+			<TaskLayout />
+		</main>
+	);
 }
 
-export default DashboardPage
+export default DashboardPage;
